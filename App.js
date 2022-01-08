@@ -1,5 +1,6 @@
 import React from 'react';
 import { View,StatusBar, Text,StyleSheet,ScrollView,Pressable } from 'react-native';
+import AppLoading from 'expo-app-loading'
 import { useFonts, Inter_900Black,Inter_300Light } from '@expo-google-fonts/inter';
 
 export default function App() {
@@ -8,6 +9,12 @@ export default function App() {
     Inter_300Light
   });
 
+
+  if(!fontsLoaded){
+    return(
+      <AppLoading />
+    )
+  } else
    
     return (
       
@@ -79,7 +86,8 @@ const styles = StyleSheet.create({
   textCTA:{
     marginTop:20,
     textDecorationLine:'underline',
-    textAlign:"right"
+    textAlign:"right",
+    color:"#ffffff"
   }
 })
 
