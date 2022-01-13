@@ -1,6 +1,7 @@
 import React from 'react';
 import { View,StatusBar, Text,StyleSheet,ScrollView,Pressable } from 'react-native';
 import AppLoading from 'expo-app-loading'
+import { AntDesign } from '@expo/vector-icons';
 import { useFonts, Inter_900Black,Inter_300Light } from '@expo-google-fonts/inter';
 
 export default function App() {
@@ -50,12 +51,20 @@ export default function App() {
         Do ut sit veniam do aute tempor. Ipsum est consequat cupidatat cupidatat ipsum incididunt deserunt deserunt culpa anim. Deserunt et laborum ea esse 
         sunt mollit irure occaecat.
         </Text>
+        <Text style={styles.text}>
+          -Lorem ipsum
+        </Text>
+        <View>
+        
         <Pressable 
         onPress={()=>console.warn("Hello")}
 
         >
+         
         <Text style={[styles.text,styles.textCTA]}>Learn More</Text>
         </Pressable>
+        <AntDesign name="arrowright" size={24} color="white" />
+        </View>
       </ScrollView>
     
     );
@@ -74,7 +83,9 @@ const styles = StyleSheet.create({
   heading:{
     fontFamily: 'Inter_900Black',
      fontSize: 40,
-     color:'#fff'
+     color:'#fff',
+     textTransform:"capitalize"
+     
   },
   text:{
     fontFamily: 'Inter_300Light',
